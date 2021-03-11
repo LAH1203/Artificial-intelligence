@@ -11,7 +11,7 @@
 ## Introduction
 - 컴퓨터에서 지식을 표현하고 다루는 수단으로서의 논리의 응용은 1960년대 초기부터 시작
 - 지식 표현의 수단으로 논리가 응용된 이유
-  - 자연 언어로 표기된 사실을 술어 논리로 표현 가능
+  - 자연 언어(한글,영어 등)로 표기된 사실을 술어 논리로 표현 가능
   - 논리는 추론을 할 수 있는 형식적 접근 방법 제공 -> 추론 과정의 기계화, 자동화 가능
   - 자연 언어로 나타낼 수 있는 개념은 술어 논리하에서 기호적 표현으로 번역이 가능하며 기호적 표현으로 나타낸 개념들은 프로그램에 의하여 조작되어 새로운 사실의 유도 가능
 
@@ -97,20 +97,24 @@
 - (ex) George, Color, Flower, BILL, X, Y, Xxx
 ##### 함수 기호(function symbol)
 - 정의역(domain)내의 하나 이상의 객체로부터 치역(range)내의 하나의 객체로 사상(mapping)하는 함수를 나타냄. 소문자로 시작
+- (수업시간에 들은 것으로는) 상수 기호를 반환한다고 함<sup>근데 정확한지는 잘 모르겠다..</sup>
 - (ex) father\_of(abel), mother\_of(X), color\_of(rose)
 ##### 술어 기호(predicate symbol)
 - 표현하고자 하는 세계의 객체 사이에 존재하는 관계, 객체의 속성 등을 나타냄. 소문자로 시작
 #### 함수식(function expression)
 - function\_name(term<sub>1</sub>, term<sub>2</sub>, ..., term<sub>n</sub>)
-- 항(term) : 상수, 변수, 함수식
+- 항(term) : 상수, 변수, 함수식 (술어기호는 항으로 올 수 없음)
 - 정의역 내의 하나 이상의 객체로부터 치역 내의 하나의 객체로 사상
   - (ex) father(david), price(bananas), plus(2, 3), f(X, Y)
 #### 원자적 문장(atomic sentence, atomic expression, atom, proposition)
 - predicate(term<sub>1</sub>, term<sub>2</sub>, ..., term<sub>n</sub>)
 - 정의역의 원소로부터 참 또는 거짓 값으로 사상되는 관계를 나타냄
+  - 원자적 문장은 주장이므로 참, 거짓을 반환함
   - (ex) likes(george, kate), likes(george, susie, tuesday), friends(bill, richard), friends(father(david), father(andrew))
 - 이름이 같아도 항의 수가 다르면 다른 것으로 간주됨
 - 진리값 true와 false도 원자적 문장
+##### 함수식과 원자적 문장의 구별
+- 함수식은 문장 안에 하나의 항으로 올 수 있으나 원자적 문장은 이미 문장이므로 항으로 올 수 없음
 #### 변수에 대한 한정사(quantifiers) ∀ and ∃
 - 전체 한정사(universal quantifier) ∀ : 모든(all)의 의미
 - 존재 한정사(existential quantifier) ∃ : 어떤(some)의 의미
